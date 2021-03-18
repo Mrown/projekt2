@@ -20,18 +20,8 @@
         <div>title: <%= book.title  %></div>
         <div>Author: <%= book.author %></div>
         <div>Book description: <%= book.description %> </div>
-        <div> 
-            <p id="borrow">Vil du låne denne bog?</p>
-            <button onclick="klikFunction()">Lån bog</button> 
+        <div>  
         </div>
         <br>
         <% }) %>
 </div>
-
-<script>
-    function klikFunction() {
-        var text="Du har lånt bogen";
-        document.getElementById("borrow").innerHTML 
-        = text;
-    }
-</script>

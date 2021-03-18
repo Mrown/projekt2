@@ -1,33 +1,18 @@
-<h2>Search Books</h2>
-<form action="/books" method="GET">
-    <div>
-        <label>Title</label>
-        <input type="text" name="title" value="<%= searchOptions.title %>">
-    </div>
-    <div>
-        <label>Published After</label>
-        <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
-    </div>
-    <div> 
-        <label>Published Before</label>
-        <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Search Books</h2>
 
-<button type="submit">Search</button>
-</form>
-<div>
-    <% books.forEach(book => { %>
-        <div>title: <%= book.title  %></div>
-        <div>Author: <%= book.author %></div>
-        <div>Book description: <%= book.description %> </div>
-        <div> 
             <p id="borrow">Vil du låne denne bog?</p>
             <button onclick="klikFunction()">Lån bog</button> 
-        </div>
-        <br>
-        <% }) %>
-</div>
-
+        
 <script>
     function klikFunction() {
         var text="Du har lånt bogen";
@@ -35,3 +20,5 @@
         = text;
     }
 </script>
+</body>
+</html>
