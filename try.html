@@ -22,16 +22,13 @@
         <div>Book description: <%= book.description %> </div>
         <div> 
             <p id="borrow">Vil du låne denne bog?</p>
-            <button onclick="klikFunction()">Lån bog</button> 
+            <button onclick=
+                "<% function klikFunction() { %>
+                <% var text="<%= Du har lånt bogen %>"; %>
+                <% document.getElementById("borrow").innerHTML %>
+                <% = text; %>
+            }">Lån bog</button> 
         </div>
         <br>
         <% }) %>
 </div>
-
-<script>
-    function klikFunction() {
-        var text="Du har lånt bogen";
-        document.getElementById("borrow").innerHTML 
-        = text;
-    }
-</script>
